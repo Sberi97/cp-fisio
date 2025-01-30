@@ -1,0 +1,374 @@
+main {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  // gap: 20px;
+
+  > * {
+    width: 100%;
+  }
+}
+
+header {
+  > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background: rgb(255, 255, 255);
+    color: var(--color--light-blue);
+
+    > div:nth-child(1) {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      width: 100%;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+
+    img {
+      max-width: 60px;
+      max-height: 60px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: flex-end;
+      width: 100%;
+      gap: 1rem;
+    }
+
+    a {
+      color: var(--color--light-blue);
+      text-decoration: none;
+    }
+  }
+}
+
+.hero {
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .scroll-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    width: 100%;
+    height: 100%;
+
+    .scroll-item {
+      flex: 0 0 100%;
+      scroll-snap-align: start;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &:nth-child(1) {
+        background: url("../assets/_MG_4422.jpg") center/cover no-repeat;
+      }
+
+      &:nth-child(2) {
+        background: url("../assets/_MG_4427.jpg") center/cover no-repeat;
+      }
+
+      &:nth-child(3) {
+        background: url("../assets/_MG_4428.jpg") center/cover no-repeat;
+      }
+
+      &:nth-child(4) {
+        background: url("../assets/_MG_4429.jpg") center/cover no-repeat;
+      }
+    }
+  }
+
+  .scroll-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 2rem;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+    transition: background-color 0.3s ease;
+
+    &.left {
+      left: 10px;
+    }
+
+    &.right {
+      right: 10px;
+    }
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+  }
+}
+
+section {
+  padding: 30px 0;
+
+  &.bg-blue {
+    background-color: rgb(22, 127, 134);
+  }
+}
+
+.doctors-info {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  gap: 20px;
+
+  color: #fff;
+
+  > div {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+
+    h3 {
+      width: 100%;
+      text-align: left;
+    }
+  }
+
+  .image-content {
+    flex: 1;
+
+    img {
+      width: auto;
+      max-width: 500px; /* Per evitare immagini troppo grandi */
+      height: auto;
+      border-radius: 8px;
+    }
+  }
+}
+
+[service-card-container] {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 30px;
+
+  color: var(--color--light-blue);
+
+  [card] {
+    display: flex;
+    flex-flow: column wrap;
+
+    max-width: 300px;
+
+    border: 1px solid var(--color--light-blue);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+
+    overflow: hidden;
+
+    figure {
+      height: 175px;
+
+      img {
+        width: 100%;
+        max-height: 175px;
+
+        object-fit: contain;
+      }
+    }
+
+    h4 {
+      text-align: center;
+    }
+  }
+}
+
+.contacts {
+  article {
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 20px;
+    gap: 20px;
+
+    color: #fff;
+
+    > div {
+      width: 100%;
+
+      hr {
+        margin: 0;
+        margin-bottom: 10px;
+        max-width: 300px;
+        color: #fff;
+      }
+    }
+
+    i {
+      color: #fff;
+    }
+
+    p {
+      margin: 0.5rem 0;
+    }
+
+    a.wa {
+      color: #25d366;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  }
+}
+
+.container {
+  width: 1170px;
+}
+
+footer {
+  background: #fff;
+  color: var(--color--light-blue);
+  text-align: center;
+  padding: 1rem;
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 8px;
+  font-size: 24px;
+  line-height: 1;
+
+  color: white;
+  background-color: var(--color--light-blue);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s, visibility 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+
+  &.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &:hover {
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+  }
+}
+
+@media (max-width: 1024px) {
+  .hero {
+    height: 350px;
+  }
+
+  [service-card-container] {
+    grid-template-columns: 1fr 1fr 1fr; /* Ridurre le colonne */
+  }
+
+  .doctors-info {
+    flex-direction: column; /* Layout a colonna sui dispositivi più piccoli */
+  }
+
+  .container {
+    width: 100%; /* Utilizzare la larghezza completa per dispositivi più piccoli */
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+
+    > div {
+      nav {
+        display: none;
+      }
+    }
+  }
+
+  .cards {
+    flex-direction: column;
+  }
+
+  .contacts {
+    article {
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: space-between;
+      gap: 20px;
+      padding-inline: 20px;
+
+      > div {
+        width: 100%;
+      }
+    }
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  .doctors-info {
+    gap: 15px;
+  }
+
+  .hero {
+    height: 300px;
+  }
+
+  [service-card-container] {
+    grid-template-columns: 1fr 1fr; /* 2 colonne per schermi più piccoli */
+  }
+
+  footer {
+    padding: 1rem 20px;
+  }
+
+  .back-to-top {
+    bottom: 10px;
+    right: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .back-to-top {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+
+  header {
+    h1 {
+      font-size: 20px;
+    }
+  }
+
+  .hero {
+    height: 250px;
+  }
+
+  [service-card-container] {
+    grid-template-columns: 1fr; /* 1 colonna per schermi molto piccoli */
+  }
+
+  .doctors-info {
+    gap: 10px;
+  }
+}
