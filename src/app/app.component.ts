@@ -1,11 +1,10 @@
 import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { CommonModule, NgOptimizedImage } from '@angular/common';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CommonModule, NgOptimizedImage],
+  imports: [CommonModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
@@ -14,31 +13,39 @@ export class AppComponent {
   serviceList = [
     {
       title: 'Ultrasuoni Terapia',
-      img: '_MG_4512.jpg',
+      img: '_MG_4512-min.jpg',
     },
     {
       title: 'Terapia Manuale',
-      img: '_MG_4521.jpg',
+      img: '_MG_4521-min.jpg',
     },
     {
       title: 'Tecar Terapia',
-      img: '_MG_4588.jpg',
+      img: '_MG_4588-min.jpg',
     },
     {
       title: 'Laser Terapia',
-      img: '_MG_4572.jpg',
+      img: '_MG_4568-min.jpg',
     },
     {
       title: 'Kinesiterapia',
-      img: '_MG_4535.jpg',
+      img: '_MG_4535-min.jpg',
     },
     {
       title: 'Riabilitazione Geriatrica',
-      img: '_MG_4475.jpg',
+      img: '_MG_4475-min.jpg',
     },
     {
       title: 'Riabilitazione Cardio-Respiratoria',
-      img: '_MG_4472.jpg',
+      img: '_MG_4472-min.jpg',
+    },
+    {
+      title: 'Massoterapia',
+      img: '_MG_4531-min.jpg',
+    },
+    {
+      title: 'Osteopatia',
+      img: '_MG_4554-min.jpg',
     },
   ];
 

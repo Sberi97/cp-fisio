@@ -4,7 +4,7 @@
       <h1>CP Fisioterapia & Osteopatia</h1>
     </div>
     <div>
-      <img src="../assets/logo.jpg" alt="Immagine Logo" />
+      <img src="../assets/logo-min.jpg" alt="Immagine Logo" />
     </div>
     <nav>
       <a href="#home" (click)="scrollToSection($event, 'home')">Home</a>
@@ -29,9 +29,6 @@
       <div class="scroll-item"></div>
       <div class="scroll-item"></div>
     </div>
-
-    <!-- <button class="scroll-arrow left" (click)="scrollLeft()">←</button>
-    <button class="scroll-arrow right" (click)="scrollRight()">→</button> -->
   </div>
 
   <section id="chi-siamo" class="bg-blue">
@@ -55,7 +52,7 @@
           </p>
         </div>
         <div class="image-content">
-          <img src="../assets/_MG_4486.jpg" alt="Immagine descrittiva" />
+          <img src="../assets/_MG_4486-min.jpg" alt="Immagine descrittiva" />
         </div>
       </article>
     </div>
@@ -77,6 +74,21 @@
           <h4>{{ service.title }}</h4>
         </div>
       </article>
+      <br />
+      <article other-services>
+        <h4>E altro...</h4>
+        <ul>
+          <li>Linfodrenaggio</li>
+          <li>Kinesioteraping</li>
+          <li>Riabilitazione Domiciliare</li>
+          <li>Tens</li>
+          <li>Elettrostimolazione</li>
+          <li>Magnetoterapia</li>
+          <li>Massggio Sportivo</li>
+          <li>Mobilizzazione Passiva</li>
+          <li>Esercizio Terapeutico</li>
+        </ul>
+      </article>
     </div>
   </section>
 
@@ -86,7 +98,7 @@
       <div>
         <i class="bi bi-info-circle fs-2"></i>
         <hr />
-        <h6>Appuntamento o Informazioni</h6>
+        <h4>Appuntamento o Informazioni</h4>
         <p>Telefono: +39 123 456 789</p>
         <p>
           <a class="wa" href="https://wa.me/123456789" target="_blank"
@@ -98,14 +110,14 @@
       <div>
         <i class="bi bi-geo-alt fs-2"></i>
         <hr />
-        <h6>Dove Siamo</h6>
+        <h4>Dove Siamo</h4>
         <p>Indirizzo: Via Esempio, 123</p>
         <p>00151, Roma (RM)</p>
       </div>
       <div>
         <i class="bi bi-clock fs-2"></i>
         <hr />
-        <h6>Orari di apertura</h6>
+        <h4>Orari di apertura</h4>
         <p>Lunedi - Venerdì: 08:00 - 20:00</p>
         <p>Sabato: 09:00 - 13:00</p>
       </div>
@@ -113,7 +125,17 @@
   </section>
 </main>
 
-<footer>&copy; 2024 - Tutti i diritti riservati.</footer>
+<footer>
+  <div class="container">
+    <figure>
+      <img src="../assets/logo.png" alt="" />
+    </figure>
+    <p>
+      CP Fisioterapia & Osteopatia - Via Esempio, 123, 00151 Roma RM -
+      &copy;Tutti i diritti riservati
+    </p>
+  </div>
+</footer>
 
 <button
   [ngClass]="{ visible: showBackToTop }"
